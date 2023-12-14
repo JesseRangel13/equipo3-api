@@ -1,0 +1,36 @@
+<div class="container p-4">
+        <div class="col-md-4 mx-auto">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h3 class="text-uppercase">Editar Usuario</h3>
+                </div>
+                <div class="card-body">
+                    <form (ngSubmit)="onSubmit()">
+                    <div class="input-group mt-2 mb-3">
+                        <label for="nombre" class="input-group-text">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" [(ngModel)]="usuario.nombre" style="width: 70%;" placeholder="Nombre" autofocus required>
+                    </div>
+                     <div class="input-group mt-2 mb-3">
+                        <label for="apellidos" class="input-group-text">Apellidos</label>
+                        <input type="text" name="apellidos" id="apellidos" [(ngModel)]="usuario.apellidos" style="width: 70%;" placeholder="Apellidos" required>
+                    </div>
+                     <div class="input-group mt-2 mb-3">
+                        <label for="direccion" class="input-group-text">Direccion</label>
+                        <input type="text" name="direccion" id="direccion" [(ngModel)]="usuario.direccion" style="width: 70%;" placeholder="Direccion" required>
+                    </div>
+                    <div class="input-group mt-2">
+                        <label for="telefono" class="input-group-text">Telefono</label>
+                        <input type="number" name="telefono" id="telefono" [(ngModel)]="usuario.telefono" style="width: 70%;" placeholder="Telefono" required>
+                    </div>
+                    <div class="input-group mt-2">
+                        <label for="correo" class="input-group-text">Correo</label>
+                        <input type="email" name="correo" id="correo" [(ngModel)]="usuario.correo" style="width: 70%;" placeholder="Correo" required>
+                    </div>
+                    <div class="form-group mt-4 d-grip gap-2">
+                        <button class="btn btn-success">Editar</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+</div>

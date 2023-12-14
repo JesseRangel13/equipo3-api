@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row mt-5">
+        <h3 class="text-center text-uppercase p-2">Administrar Hamburguesas</h3>
+            <table *ngIf="hamburguesas && hamburguesas.length > 0; else noHamburguesas" class="table text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">id</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Calorias</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let hamburguesa of hamburguesas">
+                        <td>{{hamburguesa.id}}</td>
+                        <td>{{hamburguesa.nombre}}</td>
+                        <td>{{hamburguesa.descripcion}}</td>
+                        <td>{{hamburguesa.calorias}}</td>
+                        <td>{{hamburguesa.imagen}}</td>
+                        <td>
+                            <div class="btn-group">
+                                <button (click)="update(hamburguesa.id)" class="btn btn-warning p-2"><i class="fa-regular fa-pen-to-square"></i></button>
+                                <button (click)="delete(hamburguesa.id)" class="btn btn-danger p-2"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+            <ng-template #noHamburguesas>
+                <div class="card text-center mx-auto">
+                    <div class="card-header">
+                        <h3>No hay registros</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Crea una nueva hamburguesa</p>
+                        <a routerLink="/hamburguesas/add" class="btn" style="background-color: #72AD54; color: #ffffff">Crear</a>
+                    </div>
+                </div>
+            </ng-template>     
+    </div>
+</div>

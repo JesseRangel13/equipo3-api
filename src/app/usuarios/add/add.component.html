@@ -1,0 +1,36 @@
+<div class="container p-4">
+    <div class="col-md-4 mx-auto">
+        <div class="card text-center">
+            <div class="card-header">
+                <h3 class="text-uppercase">crear Usuario</h3>
+            </div>
+            <div class="card-body">
+                <form (ngSubmit)="onSubmit()">
+                <div class="input-group mt-2">
+                    <label for="nombre" class="input-group-text">Nombre</label>
+                    <input type="text" [(ngModel)]="usuario.nombre" name="nombre" id="nombre" placeholder="Nombre" autofocus required>
+                </div>
+                    <div class="input-group mt-2">
+                    <label for="apellidos" class="input-group-text">Apellidos</label>
+                    <input type="text" [(ngModel)]="usuario.apellidos" name="apellidos" id="apellidos" placeholder="Apellidos" required>
+                </div>
+                    <div class="input-group mt-2">
+                    <label for="direccion" class="input-group-text">Direccion</label>
+                    <input type="text" [(ngModel)]="usuario.direccion" name="direccion" id="direccion" placeholder="Direccion" required>
+                </div>
+                    <div class="input-group mt-2">
+                    <label for="telefono" class="input-group-text">Telefono</label>
+                    <input type="number" [(ngModel)]="usuario.telefono"  name="telefono" id="telefono" placeholder="Telefono" required>
+                </div>
+                <div class="input-group mt-2">
+                    <label for="correo" class="input-group-text">Correo</label>
+                    <input type="email" [(ngModel)]="usuario.correo" name="correo" id="correo" placeholder="Correo" required>
+                </div>
+                <div class="form-group mt-4 d-grip gap-2">
+                    <button class="btn btn-success">Crear</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
