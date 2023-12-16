@@ -1,36 +1,48 @@
 <div class="container p-4">
-        <div class="col-md-4 mx-auto">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
             <div class="card text-center">
                 <div class="card-header">
                     <h3 class="text-uppercase">Editar Usuario</h3>
                 </div>
                 <div class="card-body">
                     <form (ngSubmit)="onSubmit()">
-                    <div class="input-group mt-2 mb-3">
-                        <label for="nombre" class="input-group-text">Nombre</label>
-                        <input type="text" name="nombre" id="nombre" [(ngModel)]="usuario.nombre" style="width: 70%;" placeholder="Nombre" autofocus required>
-                    </div>
-                     <div class="input-group mt-2 mb-3">
-                        <label for="apellidos" class="input-group-text">Apellidos</label>
-                        <input type="text" name="apellidos" id="apellidos" [(ngModel)]="usuario.apellidos" style="width: 70%;" placeholder="Apellidos" required>
-                    </div>
-                     <div class="input-group mt-2 mb-3">
-                        <label for="direccion" class="input-group-text">Direccion</label>
-                        <input type="text" name="direccion" id="direccion" [(ngModel)]="usuario.direccion" style="width: 70%;" placeholder="Direccion" required>
-                    </div>
-                    <div class="input-group mt-2">
-                        <label for="telefono" class="input-group-text">Telefono</label>
-                        <input type="number" name="telefono" id="telefono" [(ngModel)]="usuario.telefono" style="width: 70%;" placeholder="Telefono" required>
-                    </div>
-                    <div class="input-group mt-2">
-                        <label for="correo" class="input-group-text">Correo</label>
-                        <input type="email" name="correo" id="correo" [(ngModel)]="usuario.correo" style="width: 70%;" placeholder="Correo" required>
-                    </div>
-                    <div class="form-group mt-4 d-grip gap-2">
-                        <button class="btn btn-success">Editar</button>
-                    </div>
+                        <div class="form-group row mt-2">
+                            <label for="nombre" class="col-sm-4 col-form-label">Nombre</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="nombre" id="nombre" [(ngModel)]="usuario.nombre" placeholder="Nombre" autofocus required>
+                            </div>
+                        </div>
+                        <div class="form-group row mt-2">
+                            <label for="apellidos" class="col-sm-4 col-form-label">Apellidos</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="apellidos" id="apellidos" [(ngModel)]="usuario.apellidos" placeholder="Apellidos" required>
+                            </div>
+                        </div>
+                        <div class="form-group row mt-2">
+                            <label for="direccion" class="col-sm-4 col-form-label">Direccion</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" name="direccion" id="direccion" [(ngModel)]="usuario.direccion" placeholder="Direccion" required>
+                            </div>
+                        </div>
+                        <div class="form-group row mt-2">
+                            <label for="telefono" class="col-sm-4 col-form-label">Telefono</label>
+                            <div class="col-sm-8">
+                                <input type="number" class="form-control" name="telefono" id="telefono" [(ngModel)]="usuario.telefono" placeholder="Telefono" required>
+                            </div>
+                        </div>
+                        <div class="form-group row mt-2">
+                            <label for="correo" class="col-sm-4 col-form-label">Correo</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" name="correo" id="correo" [(ngModel)]="usuario.correo" placeholder="Correo" required>
+                            </div>
+                        </div>
+                        <div class="form-group mt-4 d-grid gap-2">
+                            <button class="btn btn-success">Editar</button>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
+    </div>
 </div>
